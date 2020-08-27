@@ -299,6 +299,7 @@ main {
   cursor: pointer;
   display: block;
   margin-bottom: 5%;
+  margin-top: -5%;
 }
 .next-dslide {
   font-size: 1.48vw;
