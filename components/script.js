@@ -2,6 +2,19 @@ let txtCount = document.querySelector('#txt-count');
 let textarea = document.querySelector('#text-cont');
 let run = document.querySelector('#run');
 let removeError = document.querySelector('#cancel');
+let plagResp = document.querySelector('#plaigarised-resp');
+let plagCent = document.querySelector('#plaigiarism-percent');
+let uniqResp = document.querySelector('#unique-resp');
+let uniqCent = document.querySelector('#unique-percent');
+
+plagResp.style.color = '#FF0000';
+plagResp.style.fontWeight = 'bold';
+uniqResp.style.color = '#00D930';
+uniqResp.style.fontWeight = 'bold';
+plagCent.style.color = '#FF0000';
+plagCent.style.fontWeight = 'bold';
+uniqCent.style.color = '#00D930';
+uniqCent.style.fontWeight = 'bold';
 
 textarea.value = textarea.value.replace(/^\s*|\s*$/g,'');
 
