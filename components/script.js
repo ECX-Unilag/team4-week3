@@ -6,15 +6,60 @@ let plagResp = document.querySelector('#plaigarised-resp');
 let plagCent = document.querySelector('#plaigiarism-percent');
 let uniqResp = document.querySelector('#unique-resp');
 let uniqCent = document.querySelector('#unique-percent');
+let downloadBtn = document.querySelector('#download');
+let downloadScreen = document.querySelector('#downloadScreen');
+let drops = document.querySelector('#drops');
+let openDrops = document.querySelector('#open-drops');
+let cancelDownload = document.querySelector('#cancel-download');
+
+drops.style.display = 'none';
+downloadScreen.style.display = 'none';
+downloadBtn.addEventListener('click', function() {
+    downloadScreen.style.display = 'block';
+    downloadScreen.style.position = 'absolute';
+    downloadScreen.style.top = '27%';
+    downloadScreen.style.width = "44%";
+    downloadScreen.style.marginLeft = '8%';
+});
+
+cancelDownload.onclick = function() {
+    downloadScreen.style.display = 'none';
+}
+
+openDrops.onclick = function() {
+    if(drops.style.display == 'none') {
+        drops.style.display = 'block';
+    } else {
+        drops.style.display = 'none';
+    }
+}
+
+
+// let menu, drop, ham, closes;
+//         menu = document.querySelector('#menu');
+//         drop = document.querySelector('#drop');
+//         ham = 'Assets/menu.svg';
+//         closes = 'Assets/close.svg';
+//         menu.onclick = function() {
+//             if (menu.src.match(ham)) {
+//                 menu.src = closes;
+//                 drop.style.display = 'flex';
+//             } else {
+//                 menu.src = ham;
+//                 drop.style.display = 'none';
+//             }
+//         }
 
 plagResp.style.color = '#FF0000';
 plagResp.style.fontWeight = 'bold';
-uniqResp.style.color = '#00D930';
-uniqResp.style.fontWeight = 'bold';
 plagCent.style.color = '#FF0000';
 plagCent.style.fontWeight = 'bold';
+plagCent.style.fontSize = '1.8vw';
+uniqResp.style.color = '#00D930';
+uniqResp.style.fontWeight = 'bold';
 uniqCent.style.color = '#00D930';
 uniqCent.style.fontWeight = 'bold';
+uniqCent.style.fontSize = '1.8vw';
 
 textarea.value = textarea.value.replace(/^\s*|\s*$/g,'');
 
