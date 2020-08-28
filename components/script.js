@@ -1,7 +1,8 @@
-let plagResp, plagCent, uniqResp, uniqCent, downloadBtn, downloadScreen,
-    drops, openDrops, cancelDownload, scrOne, scrTwo, nextDslide, Yes, No;
+// VARIABLES DECLARATION
+let plagResp, plagCent, uniqResp, uniqCent, downloadBtn, downloadScreen, drops, openDrops, cancelDownload, 
+    scrOne, scrTwo, nextDslide, Yes, No, typeDoc, typeDocx, typePDF, fileTypeDscrp;
 
-    
+// VARIABLES ASSIGNMENT  
     plagResp = document.querySelector('#plaigarised-resp');
     plagCent = document.querySelector('#plaigiarism-percent');
     uniqResp = document.querySelector('#unique-resp');
@@ -17,9 +18,12 @@ let plagResp, plagCent, uniqResp, uniqCent, downloadBtn, downloadScreen,
     Yes = document.querySelector('#yes');
     No = document.querySelector('#no');
     Exit = document.querySelector('#exit');
+    typeDoc = document.querySelector('#doc');
+    typeDocx = document.querySelector('#docx');
+    typePDF = document.querySelector('#PDF');
+    fileTypeDscrp = document.querySelector('#file-type');
     
-
-
+// JS STYLINGS
     drops.style.display = 'none';
     downloadScreen.style.display = 'none';
     plagResp.style.color = '#FF0000';
@@ -33,7 +37,7 @@ let plagResp, plagCent, uniqResp, uniqCent, downloadBtn, downloadScreen,
     uniqCent.style.fontWeight = 'bold';
     uniqCent.style.fontSize = '1.8vw';
     
-
+// JS EVENTS
 downloadBtn.addEventListener('click', function() {
     downloadScreen.style.display = 'block';
     downloadScreen.style.position = 'absolute';
@@ -62,4 +66,33 @@ openDrops.onclick = function() {
         drops.style.display = 'none';
     }
 }
-
+typeDoc.onclick = function() {
+    this.style.background = 'rgba(0, 0, 0, 0.444)';
+    this.style.color = '#FFFFFF';
+    this.value = 'Doc';
+    fileTypeDscrp.innerHTML = this.value;
+    typeDocx.style.background = 'transparent';
+    typeDocx.style.color = 'black';
+    typePDF.style.background = 'transparent';
+    typePDF.style.color = 'black';
+}
+typeDocx.onclick = function() {
+    this.style.background = 'rgba(0, 0, 0, 0.444)';
+    this.style.color = '#FFFFFF';
+    this.value = 'Docx';
+    fileTypeDscrp.innerHTML = this.value;
+    typeDoc.style.background = 'transparent';
+    typeDoc.style.color = 'black';
+    typePDF.style.background = 'transparent';
+    typePDF.style.color = 'black';
+}
+typePDF.onclick = function() {
+    this.style.background = 'rgba(0, 0, 0, 0.444)';
+    this.style.color = '#FFFFFF';
+    this.value = 'PDF';
+    fileTypeDscrp.innerHTML = this.value;
+    typeDocx.style.background = 'transparent';
+    typeDocx.style.color = 'black';
+    typeDoc.style.background = 'transparent';
+    typeDoc.style.color = 'black';
+}
