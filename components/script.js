@@ -48,6 +48,8 @@ Yes.onclick = function() {
 }
 function cancelDOwnloads() {
     downloadScreen.style.display = 'none';
+    scrTwo.style.display = 'none';
+    scrOne.style.display = 'block';
 }
 nextDslide.onclick = function() {
     scrOne.style.display = 'none';
