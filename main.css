@@ -264,8 +264,13 @@ main {
 .downloadScreen {
   background: #FFD874;
   padding: 2% 2% 2% 5%;
+  display: none;
 }
-.downloadScreen > div:nth-child(1) > div {
+#screen-two {
+  display: none;
+}
+.downloadScreen > div:nth-child(1) > div:nth-child(1),
+.downloadScreen > div:nth-child(1) > div:nth-child(2) {
   width: 50%;
   margin: 5% 0;
 }
@@ -293,6 +298,9 @@ main {
   background: rgba(0, 0, 0, 0.444);
   color: white;
 }
+#errorMsg {
+  display: none;
+}
 #cancel-download {
   width: 1.5vw;
   float: right;
@@ -303,7 +311,7 @@ main {
 }
 .next-dslide {
   font-size: 1.48vw;
-  float: right;
+  text-align: right;
   margin-right: 9%;
   cursor: pointer;
 }
