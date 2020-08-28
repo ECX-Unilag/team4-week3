@@ -341,3 +341,26 @@ footer {
   align-items: center;
   background: #FDB600;
 }
+.downloadScreen2 {
+  width: 100%;
+  padding-top: 3%;
+  text-align: center;
+  font-size: 1.5vw;
+}
+.downloadScreen2 > div {
+  margin: 6% 0 0 0;
+}
+.downloadScreen2 > header {
+  font-weight: 600;
+}
+.downloadScreen2 div span:hover {
+  font-weight: 600;
+}
+.downloadScreen2 div span:nth-child(1) {
+  margin-right: 4%;
+  cursor: pointer;
+}
+.downloadScreen2 div span:nth-child(2) {
+  margin-left: 4%;
+  cursor: pointer;
+}
