@@ -1,4 +1,5 @@
 # team4-week3
+# Plaigarism Checker
 
 # Repo Link
 https://github.com/ECX-Unilag/team4-week3
@@ -8,5 +9,3 @@ https://www.figma.com/file/hCUvQyXjjsdjteHfrUQBdm/Plagiarism-checker?node-id=0%3
 
 # Live Site Link
 https://ecx-unilag.github.io/team4-week3/
-
-# Plaigarism Checker
