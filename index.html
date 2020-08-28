@@ -12,9 +12,8 @@
             <img src="Assets/images/logo.svg">
             <span>Plagiarism AppChecker</span>
         </div>
-        <div class="nav-links">
-            <img src="Assets/images/close-menu.svg" class="mob">
-            <img src="Assets/images/menu.svg" class="mob">
+        <div class="nav-links" id="menu-drop">
+            <img src="Assets/images/menu.svg" id="menu" class="mob">
             <div class="nav-link-cnt">
                 <a href="index.html" class="active">Home</a>
                 <a href="components/about-page.html">About</a>
@@ -41,5 +40,22 @@
         <span>Team 4</span>
         <span>@2020 ECX INTERNSHIP</span>
     </footer>
+    <script>
+        let menu, mDrop, ham, closes;
+            menu = document.querySelector('#menu');
+            mDrop = document.querySelector('#menu-drop');
+            ham = 'Assets/images/menu.svg';
+            closes = 'Assets/images/close-menu.svg';
+            menu.onclick = function() {
+                console.log('click');
+            if (menu.src.match(ham)) {
+                menu.src = closes;
+                mDrop.style.display = 'flex';
+            } else {
+                menu.src = 'Assets/images/menu.svg';
+                mDrop.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
